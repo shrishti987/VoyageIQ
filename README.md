@@ -1,55 +1,82 @@
-NestAway – Airbnb Inspired Travel Platform
-NestAway is a full-stack web application inspired by Airbnb that allows users to explore, list, and manage vacation rentals around the world. The platform provides a seamless interface for travelers to discover stays and for hosts to share their properties.
-This project demonstrates full-stack web development using Node.js, Express, MongoDB, and EJS, along with authentication, image uploads, and responsive UI design.
+# 🌍 Travelia – Smart Travel Booking Platform
+Travelia is a full-stack web application inspired by Airbnb that allows users to explore, book, and manage travel stays with intelligent features like recommendations and fraud detection.
 
-✨ Features
-🏡 Browse vacation rental listings
-🔍 View detailed property pages
-➕ Create, edit, and delete property listings
-🔐 User authentication (signup & login)
-🖼 Upload images for property listings
-⭐ Leave reviews and ratings
-📱 Responsive UI for different devices
-📊 Organized listings with categories and filters
+## ✨ Features
 
-🛠 Tech Stack
-Frontend
-HTML
-CSS
-JavaScript
-EJS Templates
-Bootstrap
-Backend
-Node.js
-Express.js
-Database
-MongoDB
-Mongoose
+### 🏡 Listings
+- Create, edit, and delete listings
+- Upload images using Cloudinary
+- Categorized browsing (Beach, Mountains, City, etc.)
+- Search by location, country, and price range
 
-Other Tools
-Cloudinary (image uploads)
-Passport.js (authentication)
+### ✈️ Booking System
+- Book stays with check-in and check-out dates
+- Dynamic price calculation based on number of days
+- View all bookings in **My Trips**
+- Booking validation:
+  - Invalid dates prevented
+  - Max 30 days booking limit
+  - Duplicate booking prevention
 
-Git & GitHub
-📂 Project Structure
-travelia
+### 👤 Authentication
+- User signup/login/logout using Passport.js
+- Session-based authentication
+
+### ⭐ Reviews
+- Add ratings and comments for listings
+- View all reviews per listing
+
+### ❤️ Wishlist
+- Save favorite listings
+
+### 🤖 Smart Features
+- **Recommendation System**
+  - Suggests listings based on user preferences
+- **Fraud Detection**
+  - Flags suspicious listings (e.g. very low price, keywords like “free”)
+
+## 🛠️ Tech Stack
+- **Frontend:** EJS, Bootstrap, CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (Mongoose)
+- **Authentication:** Passport.js
+- **File Upload:** Multer + Cloudinary
+
+## 📂 Project Structure
+travelia/
+│── models/
+│ ├── listing.js
+│ ├── booking.js
+│ ├── review.js
+│ └── user.js
 │
-├── models          # Database schemas
-├── routes          # Application routes
-├── controllers     # Business logic
-├── views           # EJS templates
-├── public          # CSS, JS, images
-├── app.js          # Main server file
-└── package.json
+│── views/
+│ ├── listings/
+│ ├── bookings/
+│ ├── users/
+│ └── layouts/
+│
+│── public/
+│ ├── css/
+│ └── js/
+│
+│── app.js
+│── schema.js
+│── cloudConfig.js
 
-🚀 Future Improvements
-Payment gateway integration
-Booking system
 
-AI-based stay recommendations
-👩‍💻 Author
-Shrishti
-BCA (AI & Data Science) Student
-Passionate about AI, Data Science, and Full-Stack Development
-Map integration for property locations
-Advanced search filters
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/travelia.git
+cd travelia
+2. Install dependencies
+npm install
+3. Start MongoDB
+Make sure MongoDB is running locally:
+mongod
+4. Run the project
+node app.js
+Open in browser:
+http://localhost:3000
